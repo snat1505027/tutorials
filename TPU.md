@@ -91,10 +91,20 @@ gcloud alpha compute tpus tpu-vm attach-disk ${name} \
 sudo lsblk
 sudo mkdir -p /ssd
 sudo mount -o discard,defaults /dev/sdb /ssd
+# sudo mount -o ro,noload /dev/sdb /ssd (if the disk is read-only)
 sudo chmod a+w /ssd
 ```
 
-You can also do the same thing but with `detach-disk` if you need to.
+You can also do the same thing but with `detach-disk` if you need to. The process is `unmount -> detach -> attach -> mount`.
+
+```
+name='tpu1' && zone='us-central1-f' && tpu_type='v2-8'
+
+gcloud alpha compute tpus tpu-vm detach-disk ${name} \
+    --zone=us-central1-f \
+    --disk=tvqa-disk 
+```
+
 
 
 ## Adding a Collaborator (Admin Side)
