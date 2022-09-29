@@ -19,7 +19,10 @@ pip install "jax[tpu]>=0.2.18" -f https://storage.googleapis.com/jax-releases/li
 cd merlot_reserve
 pip install -r requirements.txt
 pip3 install python-dotenv
+sudo apt-get install parallel
 pip install wandb
+sudo apt-get install -y libsndfile-dev
+sudo apt install ffmpeg
 ```
 
 3. Install and run `jupyter lab` to modify the code:
