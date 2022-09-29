@@ -22,6 +22,7 @@ pip3 install python-dotenv
 sudo apt-get install parallel
 pip install wandb
 sudo apt-get install -y libsndfile-dev
+sudo apt update
 sudo apt install ffmpeg
 ```
 
