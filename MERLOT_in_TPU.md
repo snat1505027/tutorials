@@ -24,6 +24,11 @@ pip install wandb
 sudo apt-get install -y libsndfile-dev
 sudo apt update
 sudo apt install ffmpeg
+
+# preprocessing
+pip install pysrt
+pip install Unidecode
+pip install ipdb
 ```
 
 3. Install and run `jupyter lab` to modify the code:
