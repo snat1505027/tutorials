@@ -89,10 +89,10 @@ gcloud alpha compute tpus tpu-vm attach-disk ${name} \
 
 # mount disk
 sudo lsblk
-sudo mkdir -p /ssd
-sudo mount -o discard,defaults /dev/sdb /ssd
-# sudo mount -o ro,noload /dev/sdb /ssd (if the disk is read-only)
-sudo chmod a+w /ssd
+sudo mkdir -p /data
+sudo mount -o discard,defaults /dev/sdb /data
+# sudo mount -o ro,noload /dev/sdb /data (if the disk is read-only)
+sudo chmod a+w /data
 ```
 
 You can also do the same thing but with `detach-disk` if you need to. The process is `unmount -> detach -> attach -> mount`.
