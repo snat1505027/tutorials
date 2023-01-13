@@ -84,7 +84,7 @@ name='tpu1' && zone='us-central1-f' && tpu_type='v2-8'
 
 gcloud alpha compute tpus tpu-vm attach-disk ${name} \
     --zone=us-central1-f \
-    --disk=tvqa-disk \
+    --disk=disk-1 \
     --mode=read-only
 
 # mount disk
@@ -102,7 +102,7 @@ name='tpu1' && zone='us-central1-f' && tpu_type='v2-8'
 
 gcloud alpha compute tpus tpu-vm detach-disk ${name} \
     --zone=us-central1-f \
-    --disk=tvqa-disk 
+    --disk=disk-1 
 ```
 
 
